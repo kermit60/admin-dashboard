@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,500;9..40,700&family=Poppins:wght@300;500;700&family=Roboto:wght@100;300;500;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+    --main-sidebar-color: #828490;
+    --sidebar-background-color: rgb(26, 26, 33);
+}
 
 * {
     margin: 0;
@@ -26,7 +30,7 @@ div {
         width: minmax(0, 200px);
         padding: 25px;
         gap: 5px;
-        background-color: #18181b;
+        background-color: var(--sidebar-background-color);
         grid-row: 1 / 3;
         row-gap: 25px;
         .header {
@@ -38,21 +42,63 @@ div {
             border-top: 0.25px solid #4e505b;
         }
     }
+
     .sidebar > a {
-        color: #828490;
+        color: var(--main-sidebar-color);
         text-decoration: none;
-        text-align: center;
+        /* text-align: center; */
+        padding-left: 28px;
         font-size: 18px;
         background-repeat: no-repeat;
         background-position: left top;
     }
+
     a:hover{
         text-decoration: underline;
     }
 }
 
+#dashboard, #home, #profile, #messages,
+#tasks, #community, #settings, #support,
+#privacy {
+    background-size: 20px;
+}
+
 #dashboard {
-    background-image: url(/icons/view-dashboard.svg);
+    background-image: url(/icons/layout.png);
+}
+
+#home {
+    background-image: url(/icons/home.png);
+
+}
+
+#profile {
+    background-image: url(/icons/user.png);
+}
+
+#messages {
+    background-image: url(/icons/chat.png);
+}
+
+#tasks{
+    background-image: url(/icons/to-do-list.png);
+}
+
+#community {
+    background-image: url(/icons/community.png);
+}
+
+#settings {
+    background-image: url(/icons/settings.png);
+}
+
+#support {
+    background-image: url(/icons/online-chat.png);
+}
+
+#privacy {
+    background-image: url(/icons/shield.png);
 }
 
 .top-nav-container {
