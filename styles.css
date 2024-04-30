@@ -2,6 +2,7 @@
 :root {
     --main-sidebar-color: #828490;
     --sidebar-background-color: rgb(26, 26, 33);
+    --main-background-color: rgb(239, 241, 251);
 }
 
 * {
@@ -12,10 +13,9 @@
 }
 
 div {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     
 }
-
 
 
 .container {
@@ -23,6 +23,7 @@ div {
     grid-template-columns: 200px 1fr;
     width: 100%;
     font-size: 24px;
+    background-color: var(--main-background-color);
 
     .sidebar {
         display: grid;
@@ -44,23 +45,103 @@ div {
     }
 
     .sidebar > a {
-        color: var(--main-sidebar-color);
         text-decoration: none;
         /* text-align: center; */
         padding-left: 28px;
         font-size: 18px;
         background-repeat: no-repeat;
         background-position: left top;
+        color: var(--main-sidebar-color);
     }
 
-    a:hover{
+    .sidebar > a:hover{
         text-decoration: underline;
     }
 }
 
+
+/* top navigations bar section */
+.top-nav-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    margin: 20px;
+    border-radius: 7px;
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.075);
+}
+
+.top-nav-container > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    list-style-type: none;
+    justify-items: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.top-nav-container > ul > li > a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--main-sidebar-color);
+    font-weight: 200;
+}
+
+.top-nav-container > ul > li > a:hover {
+    color: blue;
+}
+
+.top-nav-options {
+    display: grid;
+    grid-template-columns: 1fr 3px 32px 3px 75px 50px;
+    align-items: center;
+    justify-self: end;
+    font-size: 18px;
+    font-weight: 100;
+    padding-right: 15px;
+    gap: 10px;
+    
+}
+
+.top-nav-options > input{
+    border-radius: 30px;
+    border: none;
+    background-color: var(--main-background-color);
+    height: 32px;
+    padding-left: 30px;
+    font-size: 16px;
+    background-image: url(/icons/search.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+
+}
+
+.t-divider {
+    border-left: 1px solid black;
+    height: 32px;
+}
+
+/* Main cards container */
+.main-content {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-template-columns: 2fr 300px;
+    margin: 20px;
+}
+
+.card {
+    height: 200px;
+}
+
+
+
+
+
+
+/* Sidebar icons */
 #dashboard, #home, #profile, #messages,
 #tasks, #community, #settings, #support,
-#privacy {
+#privacy, #alerts {
     background-size: 20px;
 }
 
@@ -101,21 +182,26 @@ div {
     background-image: url(/icons/shield.png);
 }
 
-.top-nav-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: beige;
-    margin: 10px;
+#alerts {
+    background-image: url(/icons/notification.png);
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
 }
 
-.main-content {
-    display: grid;
-    grid-column: 2 / 3;
-    grid-template-columns: 2fr 200px;
-    margin: 10px;
+#avatar {
+    background-image: url(/icons/kermit.png);
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    
 }
 
-.card {
-    height: 200px;
+#avatar:hover,
+#alerts:hover {
+    cursor: pointer;
 }
-
