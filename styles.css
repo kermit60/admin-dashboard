@@ -40,9 +40,13 @@ div {
             color: white;
             text-align: center;
         }
-        .h-divider{
-            border-top: 0.25px solid #4e505b;
-        }
+        
+    }
+
+    .h-divider {
+        background-color: #4e505b;
+        height: 0.5px;
+        width: 100%;
     }
 
     .sidebar > a {
@@ -129,7 +133,8 @@ div {
     grid-column: 2 / 3;
     grid-template-columns: 2fr 300px;
     grid-template-rows: max-content;
-    margin: 20px;
+    margin: 25px;
+    gap: 20px;
 }
 
 .section-title {
@@ -143,7 +148,7 @@ div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     grid-template-rows: max-content;
-    gap: 10px;
+    gap: 20px;
 }
 
 .project-image {
@@ -154,6 +159,7 @@ div {
     border-radius: 7px;
 }
 
+/* the transition for simple effect that makes card standout */
 .card {
     display: grid;
     grid-template-rows: max-content 1fr max-content;
@@ -161,7 +167,14 @@ div {
     padding: 25px;
     gap: 30px;
     border-radius: 7px;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.075);
     
+}
+
+.card:hover {
+    transition: all 0.5s;
+    box-shadow: 0px 2px 10px rgb(0, 0, 0, 0.275);
+    outline: 2px solid lightblue;
 }
 
 .card-control {
@@ -172,10 +185,49 @@ div {
     justify-content: end;
 }
 
+.card-div {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
 
-p {
+p, h5 {
     font-size: 16px;
     font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+h5 {
+    font-weight: 400;
+}
+/* news announcement section */
+#news {
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 20px;
+}
+
+/* using template rows for only allocating the max width and height
+    of a random content */
+#announcements,
+#trending {
+    display: grid;
+    grid-template-rows: max-content;
+    background-color: white;
+    gap: 20px 15px;
+    padding: 25px;
+    border-radius: 7px;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.075);
+}
+
+#trending {
+    grid-template-columns: max-content 1fr;
+
+}
+
+/* Makes the trending divider span  */
+#trending .h-divider {
+    grid-column: -1 / 1;
 }
 
 /* Sidebar icons */
@@ -264,4 +316,26 @@ p {
 
 .card-icon-share {
     background-image: url(icons/share.png);
+}
+
+#news-profile-lego,
+#news-profile-diamonds,
+#news-profile-droplet {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+}
+
+#news-profile-lego {
+    background-image: url(icons/lego.jpg);
+}
+
+#news-profile-diamonds {
+    background-image: url(icons/diamonds.jpg);
+}
+
+#news-profile-droplet {
+    background-image: url(icons/droplets.jpg);
 }
