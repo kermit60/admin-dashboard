@@ -238,44 +238,44 @@ h5 {
 }
 
 #dashboard {
-    background-image: url(/icons/layout.png);
+    background-image: url(icons/layout.png);
 }
 
 #home {
-    background-image: url(/icons/home.png);
+    background-image: url(icons/home.png);
 
 }
 
 #profile {
-    background-image: url(/icons/user.png);
+    background-image: url(icons/user.png);
 }
 
 #messages {
-    background-image: url(/icons/chat.png);
+    background-image: url(icons/chat.png);
 }
 
 #tasks{
-    background-image: url(/icons/to-do-list.png);
+    background-image: url(icons/to-do-list.png);
 }
 
 #community {
-    background-image: url(/icons/community.png);
+    background-image: url(icons/community.png);
 }
 
 #settings {
-    background-image: url(/icons/settings.png);
+    background-image: url(icons/settings.png);
 }
 
 #support {
-    background-image: url(/icons/online-chat.png);
+    background-image: url(icons/online-chat.png);
 }
 
 #privacy {
-    background-image: url(/icons/shield.png);
+    background-image: url(icons/shield.png);
 }
 
 #alerts {
-    background-image: url(/icons/notification.png);
+    background-image: url(icons/notification.png);
     height: 32px;
     background-position: center;
     background-repeat: no-repeat;
@@ -283,7 +283,7 @@ h5 {
 }
 
 #avatar {
-    background-image: url(/icons/kermit.png);
+    background-image: url(icons/kermit.png);
     height: 50px;
     width: 50px;
     border-radius: 50px;
