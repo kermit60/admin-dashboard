@@ -2,8 +2,9 @@
 :root {
     --main-sidebar-color: #828490;
     --sidebar-background-color: rgb(26, 26, 33);
-    --main-background-color: rgb(239, 241, 251);
+    --main-background-color: rgb(236, 238, 255);
 }
+
 
 * {
     margin: 0;
@@ -87,6 +88,7 @@ div {
     font-weight: 200;
 }
 
+
 .top-nav-container > ul > li > a:hover {
     color: blue;
 }
@@ -126,17 +128,55 @@ div {
     display: grid;
     grid-column: 2 / 3;
     grid-template-columns: 2fr 300px;
+    grid-template-rows: max-content;
     margin: 20px;
 }
 
+.section-title {
+    font-size: 22px;
+    grid-column: 1 / -1;
+    font-weight: 500;
+
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-rows: max-content;
+    gap: 10px;
+}
+
+.project-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/icons/colors-1383652.jpg);
+    height: 100px;
+    border-radius: 7px;
+}
+
 .card {
-    height: 200px;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    background-color: white;
+    padding: 25px;
+    gap: 30px;
+    border-radius: 7px;
+    
+}
+
+.card-control {
+    display: grid;
+    grid-template-columns: repeat(3, 24px);
+    gap: 10px;
+    align-items: end;
+    justify-content: end;
 }
 
 
-
-
-
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
 
 /* Sidebar icons */
 #dashboard, #home, #profile, #messages,
@@ -197,11 +237,31 @@ div {
     border-radius: 50px;
     background-repeat: no-repeat;
     background-position: center;
-
-    
 }
 
 #avatar:hover,
 #alerts:hover {
     cursor: pointer;
+}
+
+.card-icon-favourite,
+.card-icon-view, 
+.card-icon-share {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+.card-icon-favourite {
+    background-image: url(icons/star.png);
+    
+}
+
+.card-icon-view {
+    background-image: url(icons/eye.png);
+}
+
+.card-icon-share {
+    background-image: url(icons/share.png);
 }
